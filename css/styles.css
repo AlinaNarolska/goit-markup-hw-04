@@ -85,7 +85,7 @@ address{
 }
 body {
 	font-family: var(--main-type);
-	background-color: var(--stape-color);
+	background-color: var(--staple-color);
 	color: var(--second-color);
 	font-size: var(--main-size);
 	letter-spacing: var(--main-letter-spacing);
@@ -141,6 +141,28 @@ button {
 .web-logo {
 	color: var(--accent-color);
 }
+
+.contact-mail,
+.contact-phone{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	gap: 10px;
+}
+
+.smartphone,
+.envelope{
+	fill:var(--plus-color);
+}
+.envelope:hover,
+.envelope:focus,
+.smartphone:hover,
+.smartphone:focus{
+	fill:var(--accent-color);
+	cursor: pointer;
+}
+
+
 .navigation{
 	display: flex;
 	align-items: center;
@@ -163,7 +185,7 @@ button {
 	margin-left: auto;
 	
 } 
- .contacts-sorce:not(:last-child){
+ .contacts-source:not(:last-child){
 	margin-right: 50px;
 }
 
@@ -203,20 +225,25 @@ button {
 
 /* <===========================HERO========================> */
 .page-header{
-	border-bottom: 1px solid #ECECEC;
+	border-bottom: 1px solid var(--odd-color);
 	padding-top: 24px;
 	padding-bottom: 24px;
 	
 }
+
 .hero-title {
 	padding-top: 200px;
 	padding-bottom: 200px;
-	/* width: 1600px;
-	height: 600px; */
+	width: 1600px;
+	height: 600px;
 	text-align: center;
 	background-color: var(--auxiliary-color);
+
+	background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),url("../images/page-photo/desing-team.jpg ");
+	background-size: cover;
+	background-color: var(--odd-color-bright);
 	
-} 
+}
 
 .main-title{
 	width: 696px;
@@ -226,7 +253,7 @@ button {
 
 	font-weight:var(--staples-front-weight);
 	font-size: 44px;
-	letter-spacing:var(--secondary-letter-spacing)
+	letter-spacing:var(--secondary-letter-spacing);
 	line-height: 1.36;
 	color:var(--staple-color);
 }
@@ -234,23 +261,39 @@ button {
 	display: inline-block;
 	min-width: 200px;
 	
-
-	
 	font-weight: var(--extra-font-weight);
 	font-size: var(--secondary-size);
 	line-height: 1.87;
 	letter-spacing:var(--secondary-letter-spacing);
 	background: var(--accent-color);
 	color: var(--staple-color);
-
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .but-regist:hover,
 .but-regist:focus {
 	background-color: var(--accent-color);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	
 }
 
 /* ===============WORKS WTHIS US========== */
+.icons-functions{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:270px;
+	height:120px;
+	background-color: var(--further-color);
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+.icons-works{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap:30px;
+}
+
+
 .works-datum{
 	padding-top: 94px;
 	padding-bottom: 100px;
@@ -258,10 +301,12 @@ button {
 } 
 .list-datum{
 	display: flex;
-    gap: 30px;
+	justify-content:center;
+	gap: 10px;
 }
 .datum-title {
-    flex-basis: calc((100% - 60px) / 3);
+
+	flex-basis: calc((100% - 60px) / 3);
 }
 
 .sub-title {
@@ -279,6 +324,7 @@ button {
 	line-height: 1.71;
 	color: var(--plus-color);
 }
+
 /* ==============WHAT WE DO============ */
 .works-made{
 	padding-bottom: 94px;
@@ -321,11 +367,11 @@ button {
 	background-color: var(--staple-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
+	
 }
 .employees-card{
  	padding-top: 30px;
 	padding-bottom: 30px;
-	/* width: 270px; */
 }
 .employees-name {
 	margin-bottom: 10px;
@@ -344,6 +390,67 @@ button {
 	line-height:var(--secondary-line-height);
 	text-align: center;
 	color: var(--plus-color);
+
+	margin-bottom: 16px;
+}
+.social-list{
+	display: flex;
+	justify-content: center;
+	gap:10px;
+
+}
+.social-list-link{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: var(--staple-color);
+}
+.social-list-icon{
+	fill: var(--extra-color);
+}
+.social-list-link:hover,
+.social-list-link:focus{
+	background-color: var(--accent-color);
+  }
+.social-list-link:hover,
+.social-list-link:focus {
+	fill:var(--staple-color);
+}
+
+/* ============OUR CLIENTS======= */
+.customers{
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+.companies-link{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 170px;
+	height: 92px;
+	margin-bottom: 94px;
+	border: 1px solid var(--extra-color);
+	border-radius: 4px;
+
+	fill:var(--extra-color);
+	
+}
+
+.companies-link:hover,
+.companies-link:focus{
+	border:1px solid var(--accent-color);
+}
+
+
+.companies-icons:hover,
+.companies-icons:focus{
+	fill:var(--accent-color);
+
+
 }
 
 /* ============/BODY========= */
@@ -411,14 +518,14 @@ button {
 }
 /* ==================FOOTER========= */
 .footer {
+	display: flex;
+	align-items:center;
 	padding-top: 60px;
 	padding-bottom: 60px;
 	background-color: var(--auxiliary-color);
 }
-
-
 .footer-logotype {
-	display: block;
+	display: flex;
 	margin-bottom: 20px;
 
 	font-family: var(--second-type);
@@ -429,7 +536,13 @@ button {
 	color: var(--staple-color);
 	
 }
-.footer-sorce:not(:last-child){
+
+.footer-source{
+	display: flex;
+	align-items: center;
+	align-items:baseline;
+}
+.footer-source:not(:last-child){
 	margin-bottom: 9px;
 }
 .contact-map {
@@ -449,6 +562,48 @@ button {
 .address:hover,
 .address:focus {
 	color: var(--accent-color);
+}
+.footer-items{
+	display:flex;
+	align-items:baseline;
+	text-align: center;
+	margin-bottom: 30px;
+	font-family:var(--main-type);
+	font-weight: var(--extra-font-weight);
+	font-size: var(--main-size);
+	line-height: 1.14;
+	letter-spacing:var(--main-letter-spacing);
+	text-transform: uppercase;
+	color: var(--staple-color);
+}
+.footer-main{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap:10px;
+	}
+.footer-icons{
+	margin-left: 70px;
+}
+.footer-base{
+	display:flex;
+	align-items: baseline;
+}
+.footer-list-link{
+	display:flex;
+	justify-content:center;
+	align-content:center;
+	flex-wrap: wrap;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	fill:var(--staple-color);
+}
+.footer-list-link:hover,
+.footer-list-link:focus{
+	background-color: var(--accent-color);
 }
 
 /* ==================/FOOTER========= */
