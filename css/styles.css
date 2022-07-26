@@ -152,14 +152,13 @@ button {
 
 .smartphone,
 .envelope{
-	fill:var(--plus-color);
+	fill:currentColor;
 }
 .envelope:hover,
 .envelope:focus,
 .smartphone:hover,
 .smartphone:focus{
-	fill:var(--accent-color);
-	cursor: pointer;
+	fill:currentColor;
 }
 
 
@@ -236,12 +235,15 @@ button {
 	padding-bottom: 200px;
 	width: 1600px;
 	height: 600px;
+	margin: 0 auto;
 	text-align: center;
 	background-color: var(--auxiliary-color);
-
+	background-position:center;
+	background-repeat: no-repeat;
 	background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),url("../images/page-photo/desing-team.jpg ");
 	background-size: cover;
 	background-color: var(--odd-color-bright);
+
 	
 }
 
@@ -302,7 +304,7 @@ button {
 .list-datum{
 	display: flex;
 	justify-content:center;
-	gap: 10px;
+	gap: 30px;
 }
 .datum-title {
 
@@ -407,24 +409,21 @@ button {
 	height: 44px;
 	border-radius: 50%;
 	background-color: var(--staple-color);
+	color: var(--extra-color);
 }
 .social-list-icon{
-	fill: var(--extra-color);
+	fill:currentColor;
 }
 .social-list-link:hover,
 .social-list-link:focus{
 	background-color: var(--accent-color);
+	color:var(--staple-color);
   }
-.social-list-link:hover,
-.social-list-link:focus {
-	fill:var(--staple-color);
-}
-
 /* ============OUR CLIENTS======= */
 .customers{
 	display: flex;
 	justify-content: center;
-	gap: 10px;
+	gap: 30px;
 }
 .companies-link{
 	display: flex;
@@ -432,10 +431,8 @@ button {
 	align-items: center;
 	width: 170px;
 	height: 92px;
-	margin-bottom: 94px;
 	border: 1px solid var(--extra-color);
 	border-radius: 4px;
-
 	fill:var(--extra-color);
 	
 }
@@ -443,15 +440,9 @@ button {
 .companies-link:hover,
 .companies-link:focus{
 	border:1px solid var(--accent-color);
-}
-
-
-.companies-icons:hover,
-.companies-icons:focus{
 	fill:var(--accent-color);
-
-
 }
+
 
 /* ============/BODY========= */
 /* ==============PORTFOLIO========== */
@@ -479,6 +470,7 @@ button {
 	color: var(--second-color);
 	background-color: var(--further-color);
 	border:none;
+	
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	cursor: pointer;
@@ -487,6 +479,8 @@ button {
 .gallery-navigation:focus {
 	background-color: var(--accent-color);
 	color: var(--staple-color);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),1px 4px 6px rgba(0, 0, 0, 0.16);
+	
 }
 
 .gallery-list{
@@ -502,6 +496,17 @@ button {
 	border:1px solid var(--odd-color);
 	border-top: none;
 }
+/* ***************************************** */
+.gallery-link{
+	display: block;
+}
+.gallery-link:hover,
+.gallery-link:focus{
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ***************************************** */
 .gallery-suptitle {
 	margin-bottom: 4px;
 	font-weight: var(--extra-font-weight);
@@ -525,7 +530,7 @@ button {
 	background-color: var(--auxiliary-color);
 }
 .footer-logotype {
-	display: flex;
+	display: block;
 	margin-bottom: 20px;
 
 	font-family: var(--second-type);
@@ -546,6 +551,7 @@ button {
 	margin-bottom: 9px;
 }
 .contact-map {
+	width:240px;
 	font-weight: var(--secondary-font-weight);
 	line-height: 1.71;
 	color: var(--staple-color);
