@@ -1,5 +1,6 @@
 :root {
 	--accent-color: #2196f3;
+	--hover-assent-color:#188CE8;
 	--second-color: #212121;
 	--staple-color: #ffffff;
 	--extra-color: #afb1b8;
@@ -141,13 +142,25 @@ button {
 .web-logo {
 	color: var(--accent-color);
 }
-
 .contact-mail,
-.contact-phone{
+.contact-phone {
 	display: flex;
 	justify-content:center;
 	align-items: center;
 	gap: 10px;
+
+	font-weight: var(--secondary-font-weight);
+	line-height: var(--main-line-height);
+	letter-spacing: 0.02em;
+	color: var(--plus-color);
+
+}
+
+.contact-mail:hover,
+.contact-mail:focus,
+.contact-phone:hover,
+.contact-phone:focus {
+	color: var(--accent-color);
 }
 
 .smartphone,
@@ -203,21 +216,7 @@ button {
 .port {
 	color: var(--accent-color);
 }
-.contact-mail,
-.contact-phone {
-	font-weight: var(--secondary-font-weight);
-	line-height: var(--main-line-height);
-	letter-spacing: 0.02em;
-	color: var(--plus-color);
-	cursor: pointer;
-}
 
-.contact-mail:hover,
-.contact-mail:focus,
-.contact-phone:hover,
-.contact-phone:focus {
-	color: var(--accent-color);
-}
 
 
 /* <==========================/HEAD================> */
@@ -233,7 +232,7 @@ button {
 .hero-title {
 	padding-top: 200px;
 	padding-bottom: 200px;
-	width: 1600px;
+	max-width: 1600px;
 	height: 600px;
 	margin: 0 auto;
 	text-align: center;
@@ -273,7 +272,7 @@ button {
 }
 .but-regist:hover,
 .but-regist:focus {
-	background-color: var(--accent-color);
+	background-color:var(--hover-assent-color);
 	
 }
 
@@ -433,14 +432,16 @@ button {
 	height: 92px;
 	border: 1px solid var(--extra-color);
 	border-radius: 4px;
-	fill:var(--extra-color);
+	color:var(--extra-color);
 	
 }
-
+.companies-icons{
+	fill:currentColor;
+}
 .companies-link:hover,
 .companies-link:focus{
 	border:1px solid var(--accent-color);
-	fill:var(--accent-color);
+	color:var(--accent-color);
 }
 
 
@@ -471,7 +472,6 @@ button {
 	background-color: var(--further-color);
 	border:none;
 	
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	cursor: pointer;
 }
@@ -570,10 +570,8 @@ button {
 	color: var(--accent-color);
 }
 .footer-items{
-	display:flex;
-	align-items:baseline;
-	text-align: center;
-	margin-bottom: 30px;
+
+	margin-bottom: 20px;
 	font-family:var(--main-type);
 	font-weight: var(--extra-font-weight);
 	font-size: var(--main-size);
@@ -584,8 +582,7 @@ button {
 }
 .footer-main{
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+
 	justify-content: center;
 	gap:10px;
 	}
